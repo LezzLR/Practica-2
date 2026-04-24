@@ -14,6 +14,11 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = "/Home/AccesoDenegado";
+});
+
 // Configuración de Redis
 var redisConnectionString = builder.Configuration.GetConnectionString("RedisConnection");
 builder.Services.AddStackExchangeRedisCache(options =>
