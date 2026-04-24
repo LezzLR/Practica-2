@@ -80,7 +80,7 @@ Al iniciar la aplicación por primera vez se crean automáticamente:
 
 ## 🚀 URL de Render
 
-> **URL de producción:** `https://TU-APP.onrender.com`  
+> **URL de producción:** `https://practica-2-iu5l.onrender.com/`  
 > *(Actualizar una vez desplegado)*
 
 ---
