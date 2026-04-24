@@ -145,3 +145,9 @@ C:\Users\PC\OneDrive\Escritorio\Practica 2\obj\Debug\net8.0\refint\Practica 2.dl
 C:\Users\PC\OneDrive\Escritorio\Practica 2\obj\Debug\net8.0\Practica 2.pdb
 C:\Users\PC\OneDrive\Escritorio\Practica 2\obj\Debug\net8.0\Practica 2.genruntimeconfig.cache
 C:\Users\PC\OneDrive\Escritorio\Practica 2\obj\Debug\net8.0\ref\Practica 2.dll
+C:\Users\PC\OneDrive\Escritorio\Practica 2\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\PC\OneDrive\Escritorio\Practica 2\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\PC\OneDrive\Escritorio\Practica 2\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\PC\OneDrive\Escritorio\Practica 2\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\PC\OneDrive\Escritorio\Practica 2\bin\Debug\net8.0\StackExchange.Redis.dll
+C:\Users\PC\OneDrive\Escritorio\Practica 2\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll

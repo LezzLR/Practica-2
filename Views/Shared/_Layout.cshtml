@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/Practica_2.styles.css" asp-append-version="true" />
 </head>
 <body>
+    @using Microsoft.AspNetCore.Http
+    @inject IHttpContextAccessor HttpContextAccessor
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -25,9 +27,20 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cursos" asp-action="Index">Catálogo de Cursos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        @{
+                            var session = HttpContextAccessor.HttpContext?.Session;
+                            var ultimoCursoId = session?.GetString("UltimoCursoId");
+                            var ultimoCursoNombre = session?.GetString("UltimoCursoNombre");
+                            
+                            if (!string.IsNullOrEmpty(ultimoCursoId) && !string.IsNullOrEmpty(ultimoCursoNombre))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-primary fw-bold" asp-area="" asp-controller="Cursos" asp-action="Details" asp-route-id="@ultimoCursoId">
+                                        <i class="bi bi-arrow-return-left"></i> Volver al curso @ultimoCursoNombre
+                                    </a>
+                                </li>
+                            }
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
