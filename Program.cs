@@ -20,7 +20,9 @@ builder.Services.ConfigureApplicationCookie(options =>
 });
 
 // Configuración de Redis
-var redisConnectionString = builder.Configuration.GetConnectionString("RedisConnection");
+var redisConnectionString = builder.Configuration.GetConnectionString("RedisConnection")
+    ?? builder.Configuration["Redis:ConnectionString"];
+
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = redisConnectionString;
@@ -52,7 +54,10 @@ else
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsProduction())
+{
+    app.UseHttpsRedirection();
+}
 app.UseStaticFiles();
 
 app.UseRouting();
